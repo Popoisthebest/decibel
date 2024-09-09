@@ -29,7 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 const average = values / array.length;
                 const dbValue = Math.round(average);
 
-                dbValueElement.innerText = dbValue.toFixed(0); // 3자리 숫자로 고정
+                // 그대로 데시벨 값 출력 (padStart 제거)
+                dbValueElement.innerText = dbValue;
 
                 if (dbValue > 70) {
                     warningElement.style.display = 'block';
@@ -45,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     bar.style.height = `${barHeight * (0.9 + Math.random() * 0.5)}px`;
                 });
 
-            }, 10); // 10ms 간격으로 업데이트
+            }, 10); // 100ms 간격으로 업데이트
         })
         .catch(function (err) {
             console.error('마이크 접근 실패:', err);

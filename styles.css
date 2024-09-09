@@ -37,7 +37,8 @@ body {
 #decibel {
     font-size: 15rem;
     margin-bottom: 30px;
-    width: 500px; /* 고정된 너비 */
+    display: flex;
+    justify-content: center;
     text-align: center; /* 가운데 정렬 */
     white-space: nowrap; /* 텍스트가 줄바꿈되지 않도록 설정 */
 }
@@ -46,10 +47,11 @@ body {
     display: inline-block;
     width: 200px; /* 숫자의 폭을 고정 */
     text-align: right; /* 숫자가 오른쪽 정렬되도록 설정 */
+    margin-right: 70px; /* 숫자와 'dB' 텍스트 사이에 간격 추가 */
 }
 
 #warning {
-    font-size: 10rem;
+    font-size: 20rem;
     color: red;
     font-weight: bold;
     position: fixed;
